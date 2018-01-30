@@ -1,5 +1,5 @@
 # markdown-include-lines
-This is a markdown extension for python which allows you to include lines of a whole source file. This project was inspired by https://github.com/cmacmackin/markdown-include
+This is a markdown extension for python allows you to include lines from a source file or a whole source file. This project was inspired by https://github.com/cmacmackin/markdown-include. I tried to make the syntax as simple and intuitive as possible.
 
 ## What can you do with this extension?
 
