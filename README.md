@@ -29,3 +29,10 @@ This is a markdown extension for python which allows you to include lines of a w
 ```
 {python [15,20,3] include.py}
 ```
+## How to install
+You just clone this repo and then you run:
+```
+cd /where/ever/the/files/are
+$ pip install .
+```
+The it should be installed and you can use it like every other markdown extension
