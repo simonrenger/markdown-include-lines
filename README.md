@@ -8,7 +8,7 @@ This is a markdown extension for python which allows you to include lines of a w
 - include only a certain line
 - include certain lines
 
-## The use of this extension is as following:
+## How to use this extension:
 _([...] subtsitute with the right content)_
 ```
 {[file type]* [start at line] - [end at line] [file]}
