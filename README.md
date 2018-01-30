@@ -11,8 +11,10 @@ This is a markdown extension for python which allows you to include lines of a w
 ## The use of this extension is as following:
 _([...] subtsitute with the right content)_
 ```
-{[file type] [start at line] - [end at line] [file]}
+{[file type]* [start at line] - [end at line] [file]}
 ```
+_* file type is for the highlight part of the code block._
+
 Range of lines:
 ```
 {python 15-20 include.py}
