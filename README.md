@@ -58,7 +58,7 @@ syntax.
 
 ## How to install
 You just clone this repo and then you run:
-```
+``` bash
 cd /where/ever/the/files/are
 $ pip install .
 ```
