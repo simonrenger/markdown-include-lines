@@ -62,4 +62,4 @@ You just clone this repo and then you run:
 cd /where/ever/the/files/are
 $ pip install .
 ```
-The it should be installed and you can use it like every other markdown extension
+This should install the exention and then you can use it like any other markdown extension.
