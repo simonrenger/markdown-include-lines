@@ -29,6 +29,7 @@
 # {python 15 include.py}
 # In case you want to include only certain lines of code:
 # {python [15,20,3] include.py}
+
 from __future__ import print_function
 import re
 import os.path
@@ -93,7 +94,7 @@ class IncLinePreprocessor(Preprocessor):
                         elif x == 12 and match.group(x) != None:
                             rangeList = match.group(x).split(",")
                             break;
-                
+                #include lines of the range start - end
                     if (start <= 0 or end <= 0) and start <= end and len(rangeList) == 0:
                         lines = lines[:loc] +self.makeCode(filename,codetype,self.parse(filename)) + lines[loc+1:]
                     elif len(rangeList) == 0:
@@ -113,11 +114,12 @@ class IncLinePreprocessor(Preprocessor):
 
     def makeCode(self,filename,codeType,codeList):
         output = [];
-        output.append("_"+filename+"_");
         output.append("```"+codeType)
+        output.append("Source file: "+filename+"\n\n")
         output.extend(codeList)
         output.append("```")
         return output
+
     def parse(self,filename,start=0,end=0,wholepage = True):
         #correct start
         if start == 1:
@@ -131,10 +133,11 @@ class IncLinePreprocessor(Preprocessor):
         #parse
         outcome = []
         for cnt, line in enumerate(data):
+            line = line.rstrip('\n')
             if cnt >= start and cnt <= end or wholepage == True:
-                outcome.append(line)
+                outcome.append(str(cnt)+": "+line)
             elif end == -1 and cnt == start:
-                outcome.append(line)
+                outcome.append(str(cnt)+": "+line)
         return outcome        
             
     def readFile(self,filename):
