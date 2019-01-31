@@ -101,7 +101,7 @@ class IncLinePreprocessor(Preprocessor):
                         lines = lines[:loc] +self.makeCode(filename,codetype,self.parse(filename,start,end,False)) + lines[loc+1:]
                     else:
                         result = []
-                      for index in rangeList:
+                        for index in rangeList:
                             line = self.parse(filename,int(index),-1,False)
                             if len(line) > 0:
                                 result.append("[...]")
