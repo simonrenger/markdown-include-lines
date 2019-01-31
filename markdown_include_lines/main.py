@@ -45,7 +45,7 @@ SYNTAX = re.compile(r'\{([a-z]+)\s(([0-9]+)\s-\s([0-9]+)|([0-9]+)-([0-9]+)|([0-9
 class MarkdownIncludeLines(Extension):
     def __init__(self, configs={}):
         self.config = {
-            'base_path': ['.', 'Default location for the file to be checked' \
+            'base_path': [os.getcwd(), 'Default location for the file to be checked' \
                 'relative paths for the include statement.'],
             'encoding': ['utf-8', 'Encoding of the files ' \
                 'statement.']
@@ -101,9 +101,14 @@ class IncLinePreprocessor(Preprocessor):
                         lines = lines[:loc] +self.makeCode(filename,codetype,self.parse(filename,start,end,False)) + lines[loc+1:]
                     else:
                         result = []
-                        for index in rangeList:
-                            result.append("[...]")
-                            result.extend(self.parse(filename,int(index),-1,False))
+                      for index in rangeList:
+                            line = self.parse(filename,int(index),-1,False)
+                            if len(line) > 0:
+                                result.append("[...]")
+                                result.extend()
+                            else:
+                                result.append("Line: "+index+" Could not be found.");
+                                
                         lines = lines[:loc] +self.makeCode(filename,codetype,result)+ lines[loc+1:]
                         
                     if filename != self.m_filename:
