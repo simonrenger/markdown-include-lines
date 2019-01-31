@@ -35,7 +35,7 @@ In case you want to include only certain lines of code:
 
 In case you want to include only certain lines of code:
 ```
-{python [15,20,3] include.py}
+{cpp [15,20,3] I:\Simon\Y1\BlockB\Coding\Project\Game\main.cpp}
 ```
 The extension will generate the following output:
 
