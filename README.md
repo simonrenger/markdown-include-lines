@@ -57,6 +57,13 @@ _I:\Simon\Y1\BlockB\Coding\Project\Game\main.cpp_
 syntax.
 
 ## How to install
+
+```bash
+$ pip install git+https://github.com/simonrenger/markdown-include-lines.git
+```
+
+or
+
 You just clone this repo and then you run:
 ``` bash
 cd /where/ever/the/files/are
