@@ -52,7 +52,7 @@ _I:\Simon\Y1\BlockB\Coding\Project\Game\main.cpp_
 ```
 **Note**: [...] are actual part of this extension they get generated when ever you use this:
 ```
-{python [15,20,3] include.py}
+{cpp [15,20,3] I:\Simon\Y1\BlockB\Coding\Project\Game\main.cpp}
 ```
 syntax.
 
